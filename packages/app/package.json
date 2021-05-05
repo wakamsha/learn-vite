@@ -1,0 +1,11 @@
+{
+  "name": "@learn-vite/app",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "vite"
+  },
+  "dependencies": {
+    "@learn-vite/core": "1.0.0"
+  }
+}

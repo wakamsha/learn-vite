@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@learn-vite/core/*": ["../core/src/*"]
+    }
+  },
+  "include": ["./src/**/*"],
+}

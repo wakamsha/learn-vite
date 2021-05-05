@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
 
+  console.log(11, import.meta.env.MODE)
   return (
     <div className="App">
       <header className="App-header">
@@ -37,6 +38,7 @@ function App() {
             Vite Docs
           </a>
         </p>
+        <p>aaa{import.meta.env.DEV}</p>
       </header>
     </div>
   )
