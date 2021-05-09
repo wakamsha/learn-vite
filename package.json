@@ -12,6 +12,8 @@
     "app": "yarn workspace @learn-vite/app"
   },
   "dependencies": {
+    "mobx": "^6.3.0",
+    "mobx-react": "^7.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
