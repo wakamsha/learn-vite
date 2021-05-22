@@ -2,8 +2,9 @@
   "name": "@learn-vite/app",
   "version": "1.0.0",
   "license": "UNLICENSED",
+  "type": "module",
   "scripts": {
-    "start": "vite"
+    "start": "node ./bin/develop.js"
   },
   "dependencies": {
     "@learn-vite/core": "1.0.0"
