@@ -1,21 +1,11 @@
-import { createServer } from 'vite';
-import reactRefresh from '@vitejs/plugin-react-refresh';
-import { resolve, dirname as _dirname } from 'path';
-
-const dirname = _dirname(new URL(import.meta.url).pathname);
+// @ts-check
+const { resolve } = require('path');
+const { createServer } = require('../../../builder/vite');
 
 (async () => {
   const server = await createServer({
-    plugins: [reactRefresh()],
-    root: resolve(dirname, '../'),
-    esbuild: {
-      jsxInject: `import React from 'react';`,
-    },
-    resolve: {
-      alias: {
-        '@learn-vite/core': resolve(dirname, '../../core/src'),
-      },
-    },
+    basePath: __dirname,
+    root: resolve(__dirname, '../'),
   });
 
   await server.listen();

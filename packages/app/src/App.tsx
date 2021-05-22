@@ -1,18 +1,19 @@
 import { LabeledSlider } from '@learn-vite/core/components/LabeledSlider';
 import { observer } from 'mobx-react';
 import { useMemo, useRef, useState } from 'react';
-import { TimerStore } from './TimerStore';
-import { useContext } from './useContext';
-import { UserStore } from './UserStore';
+import { useContext } from './hooks/useContext';
+import { TimerStore } from './stores/TimerStore';
+import { UserStore } from './stores/UserStore';
 
 export const App = () => {
   const userStore = useRef(new UserStore());
+  const timerStore = useRef(new TimerStore());
 
   return (
     <UserStore.Context.Provider value={userStore.current}>
       <BMI />
       <hr />
-      <Timer store={timerStore} />
+      <Timer store={timerStore.current} />
       <hr />
       <Fetch />
     </UserStore.Context.Provider>
@@ -37,8 +38,6 @@ const BMI = () => {
     </>
   );
 };
-
-const timerStore = new TimerStore();
 
 const Timer = observer(({ store }: { store: TimerStore }) => (
   <div>

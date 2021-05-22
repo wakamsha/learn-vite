@@ -1,6 +1,6 @@
 import { makeObservable, observable, runInAction } from 'mobx';
 import { createContext } from 'react';
-import { getUsers } from './client';
+import { getUsers } from '../api/client';
 
 export class UserStore {
   public static Context = createContext<UserStore | null>(null);
